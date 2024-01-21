@@ -1,0 +1,282 @@
+/* Main styles */
+.main {
+  background-color: azure;
+
+  /* Hero section styles */
+  .section-hero {
+    background-color: rgb(222, 78, 18);
+
+    /* Container styles for the hero section */
+    &__container {
+      width: 100%;
+      max-width: 60rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column-reverse;
+      height: 25rem;
+      padding: 1em;
+
+      /* Motto styles */
+      .motto {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: whitesmoke;
+        font-weight: 500;
+
+        /* Featured text styles */
+        &--featured {
+          font-size: 0.75rem;
+          text-transform: uppercase;
+        }
+
+        /* Main text styles */
+        &--main {
+          font-size: 1.05rem;
+          line-height: 1.2;
+          margin-top: 0.75em;
+          text-transform: capitalize;
+        }
+      }
+
+      /* Giraffe image styles */
+      .giraffe {
+        flex: 1;
+        background-image: url("../images/giraffe.svg");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: auto;
+        margin-top: 1em;
+      }
+    }
+  }
+
+  /* Grid section styles */
+  .section-grid {
+    &__container {
+      width: 100%;
+      max-width: 73.125rem;
+      margin: 2em auto;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2em;
+
+      /* Grid item styles */
+      .grid-item {
+        background-color: #f2f3f5;
+        height: 28em;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0rem 0rem 1.15rem 0.5rem rgba(0, 0, 0, 0.1);
+        transition: all 300ms ease-in;
+        cursor: pointer;
+
+        /* Hover effect on grid items */
+        &:hover {
+          transform: rotateZ(-2deg);
+        }
+
+        /* Grid item image styles */
+        &__img {
+          flex: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 14em;
+          padding: 2em 0;
+        }
+
+        /* Background color for specific grid items */
+        &:nth-child(1) {
+          img {
+            background-color: rgb(242, 134, 158);
+          }
+        }
+
+        &:nth-child(2) {
+          img {
+            background-color: rgb(253, 154, 174);
+          }
+        }
+
+        // ... (Repeat for other grid items)
+
+        /* Grid item description styles */
+        &__description {
+          flex: 1;
+          background-color: #f2f3f5;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          gap: 0.75em;
+          padding: 1em;
+
+          /* Title styles */
+          .title {
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 500;
+          }
+
+          /* Description styles */
+          .description {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* Form section styles */
+  .section-form {
+    &__container {
+      width: 100%;
+      max-width: 73.125rem;
+      margin: 2em auto;
+      display: flex;
+      flex-direction: column;
+
+      /* Image container styles */
+      &--img {
+        background-color: rgb(20, 100, 100);
+        flex: 1;
+        width: 100%;
+        padding: 2em;
+      }
+
+      /* Form container styles */
+      &--form {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5em;
+        padding: 2em;
+        background-color: rgb(121, 183, 182);
+
+        /* Form title styles */
+        .form-title {
+          width: 100%;
+          text-transform: uppercase;
+          background-color: black;
+          color: whitesmoke;
+          padding: 0.25em 0.5em;
+          font-size: 1.25rem;
+        }
+
+        /* Label styles */
+        .label {
+          width: 45%;
+          text-transform: uppercase;
+          background-color: rgb(252, 208, 64);
+          color: black;
+          padding: 0.25em 0.5em;
+          font-size: 0.75rem;
+          font-weight: bold;
+        }
+
+        /* Input styles */
+        .input {
+          border: none;
+        }
+
+        /* Textarea styles */
+        .textarea {
+          height: 15em;
+          border: none;
+        }
+
+        /* Button styles */
+        .button {
+          background-color: whitesmoke;
+          border: none;
+          text-transform: capitalize;
+          padding: 0.5em 0;
+          transition: all 300ms ease-in-out;
+          cursor: pointer;
+
+          /* Hover effect on button */
+          &:hover {
+            background-color: rgb(252, 208, 64);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Media query for larger screens (min-width: 48rem) */
+@media (min-width: 48rem) {
+  .main {
+    /* Hero section styles for larger screens */
+    .section-hero {
+      &__container {
+        flex-direction: row;
+        overflow: hidden;
+
+        /* Motto styles for larger screens */
+        .motto {
+          flex: 4.2;
+
+          /* Featured text styles for larger screens */
+          &--featured {
+            font-size: 1rem;
+          }
+
+          /* Main text styles for larger screens with hover effect */
+          &--main {
+            font-size: 2.2rem;
+            cursor: pointer;
+            transition: all 200ms ease-in;
+
+            &:hover {
+              color: black;
+              transform: translateX(-1rem);
+            }
+          }
+        }
+
+        /* Giraffe image styles for larger screens */
+        .giraffe {
+          flex: 2;
+          background-position: center 4rem;
+          width: auto;
+          height: 28rem;
+        }
+      }
+    }
+
+    /* Grid section styles for larger screens */
+    .section-grid {
+      &__container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Form section styles for larger screens */
+    .section-form {
+      &__container {
+        flex-direction: row-reverse;
+        height: 25em;
+
+        /* Image container styles for larger screens */
+        &--img {
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        }
+
+        /* Form container styles for larger screens */
+        &--form {
+          flex: 2;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+/* Header styles */
+.header {
+  background-color: antiquewhite;
+  padding: 1em;
+
+  /* Container styles for the header */
+  &__container {
+    width: 100%;
+    max-width: 73.125rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Hide desktop class by default */
+    .desktop {
+      display: none;
+    }
+
+    /* Headings section styles */
+    &--headings {
+      /* Branding section styles */
+      .branding {
+        display: flex;
+        align-items: center;
+
+        /* Blog icon styles */
+        .blog {
+          font-size: 2rem;
+        }
+
+        /* Company name styles */
+        .company {
+          font-size: 1.75rem;
+          text-transform: capitalize;
+          margin-left: 0.5em;
+          font-weight: 500;
+        }
+      }
+    }
+
+    /* Trial section styles */
+    &--trial {
+      /* Menu icon styles */
+      .menu {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+/* Media query for larger screens (min-width: 48rem) */
+@media (min-width: 48rem) {
+  .header {
+    &__container {
+      /* Display desktop class on larger screens */
+      .desktop {
+        display: flex;
+      }
+
+      /* Headings section styles for larger screens */
+      &--headings {
+        display: flex;
+        align-items: center;
+        padding: 1em 0;
+
+        /* Branding section styles for larger screens */
+        .branding {
+          /* Blog icon styles with hover effect */
+          .blog {
+            font-size: 1.5rem;
+            transition: all 300ms ease-in;
+            cursor: pointer;
+
+            &:hover {
+              transform: rotateY(180deg);
+            }
+          }
+
+          /* Company name styles */
+          .company {
+            font-size: 1.25rem;
+          }
+        }
+
+        /* Links section styles for larger screens */
+        .links {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 0.1em;
+          margin-left: 2em;
+          width: 25.5em;
+
+          /* Individual link styles with hover effect */
+          .a {
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 0.9rem;
+            transition: all 300ms ease-in-out;
+            color: black;
+
+            /* Caret down icon styles */
+            .fa-caret-down {
+              margin-left: -0.3em;
+            }
+
+            &:hover {
+              border-bottom: 0.2em solid black;
+            }
+          }
+        }
+      }
+
+      /* Trial section styles for larger screens */
+      &--trial {
+        display: flex;
+
+        /* Demo and trial button styles with hover effect */
+        .demo,
+        .trial {
+          padding: 0.45em 1.25em;
+          text-decoration: none;
+          text-transform: capitalize;
+          cursor: pointer;
+          font-weight: 500;
+        }
+
+        /* Demo button styles */
+        .demo {
+          background-color: #eee;
+          color: black;
+          margin-right: 2em;
+          transition: all 300ms ease-in-out;
+
+          &:hover {
+            transform: translateX(-1em);
+            background-color: black;
+            color: #eee;
+          }
+        }
+
+        /* Trial button styles */
+        .trial {
+          background-color: #0f8ff2;
+          color: whitesmoke;
+          transition: all 300ms ease-in-out;
+
+          &:hover {
+            transform: translateX(-1em);
+            background-color: black;
+            color: #eee;
+          }
+        }
+      }
+
+      /* Hide mobile class on larger screens */
+      .mobile {
+        display: none;
+      }
+    }
+  }
+}
