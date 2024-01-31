@@ -27,7 +27,7 @@ open index.html
 
 - Alternatively, you can use a live server to serve the HTML file.
 
-### Interact with the Counter
+### Interact with the Blog
 
 - Explore the latest articles, popular topics, and more via the navigation menu.
 - Contribute to the blog by creating and uploading your own content using the provided form.
